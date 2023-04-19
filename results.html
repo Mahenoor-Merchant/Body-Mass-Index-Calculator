@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="table-users">
+   <div class="header">BODY MASS INDEX RESULT</div>
+
+      {{result}}
+      <div class="bmi-intro">
+        <h4>Healthy BMI range: 18.5 kg/m2 - 25 kg/m2</h4>
+      </div>
+</div>
+</body>
+</html>

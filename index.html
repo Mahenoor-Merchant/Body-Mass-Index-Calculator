@@ -1,0 +1,34 @@
+{% block head %}
+    <title>Body Mass Index Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h1 class="text-center">Body Mass Index Calculator</h1>
+        <div class="bmi-intro">
+            <h2>BMI introduction</h2>
+            <p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between.</p>
+            <p>These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required.</p>
+        </div>
+
+        <div class="note">
+            <h2>Note</h2>
+            <p>For STANDARD, please enter the weight in pounds and height in inches</p>
+            <p>For METRIC, please enter the weight in kilograms and height in feets</p>
+        </div>
+
+        <div class="form">
+            <form action="/math" method="POST">
+                <label for="operation">SELECT MEASURES</label>
+                <select id="measures" name="measures">
+                    <option value="standard">STANDARD</option>
+                    <option value="metric">METRIC</option>
+                </select>
+                <input type="text" name="weight" id="weight" placeholder="weight">
+                <input type="text" name="height" id="height" placeholder="height">
+                <input type="submit" value="CALCULATE BMI">
+            </form>
+        </div>
+    </div>
+{% endblock %}
